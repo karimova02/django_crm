@@ -10,10 +10,18 @@ class Lead(models.Model):
     agent = models.ForeignKey("Agent", on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.surname
+        return str(self.surname)
 
 class Agent(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self): 
-        return self.user.email
+        return str(self.user)
+
+
+
+
+
+
+    
+
